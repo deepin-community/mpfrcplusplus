@@ -1,0 +1,2 @@
+Tests: build-examples
+Depends: libmpfrc++-dev, build-essential

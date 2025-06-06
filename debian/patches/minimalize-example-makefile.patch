@@ -1,0 +1,21 @@
+Description: minimalize makefile for examples
+ Wipes out unnecessary material.
+Origin: debian
+Forwarded: not-needed
+Author: Jerome Benoit <calculs@rezozer.net>
+Last-Update: 2020-11-10
+
+--- a/example/makefile
++++ b/example/makefile
+@@ -1,9 +1,3 @@
+-example: example.o
+-	g++ example.o -o example -lmpfr -lgmp
+-
+-example.o: example.cpp
+-	g++ -c example.cpp
+-
+-clean:
+-	rm -f *.o
++LDLIBS = -lmpfr -lgmp
+ 
++build: example

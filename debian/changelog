@@ -1,5 +1,232 @@
-template-repository (1.0-1) unstable; urgency=medium
+mpfrc++ (3.7.1+ds-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream nano version.
+  * Debianization:
+    - d/control:
+      - Standards-Version, bump to version 4.7.0 (no change);
+    - d/copyright:
+      - copyright year tuples, update.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jerome Benoit <calculus@rezozer.net>  Fri, 12 Apr 2024 20:18:25 +0000
+
+mpfrc++ (3.7.0+ds-1) unstable; urgency=medium
+
+  * New upstream minor version.
+  * Debianization:
+    - d/control:
+      - Standards-Version, bump to version 4.6.2 (no change);
+    - d/copyright:
+      - copyright year tuples, update;
+    - d/s/lintian-overrides, refresh tag.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Sun, 17 Sep 2023 18:08:11 +0000
+
+mpfrc++ (3.6.9+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Debianization:
+    - d/control, migration to Debian Math Team group;
+    - d/copyright:
+      - copyright year tuples, update.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Sat, 05 Feb 2022 14:12:49 +0000
+
+mpfrc++ (3.6.8+ds-3) unstable; urgency=medium
+
+  * Debianization:
+    - d/watch, correct;
+    - d/copyright:
+      - copyright year tuples, update;
+      - machine-readable copyright file URI, fix;
+    - debian/control:
+      - Standards-Version, bump to version 4.6.0 (no change).
+
+ -- Jerome Benoit <calculus@rezozer.net>  Fri, 19 Nov 2021 11:52:38 +0000
+
+mpfrc++ (3.6.8+ds-2) unstable; urgency=medium
+
+  * SBF: correct Maintainer address (Closes: #974192).
+
+ -- Jerome Benoit <calculus@rezozer.net>  Wed, 11 Nov 2020 11:04:12 +0000
+
+mpfrc++ (3.6.8+ds-1) unstable; urgency=medium
+
+  * New upstream version (trailing-blank free version).
+  * Debianization:
+    - d/control:
+      - Maintainer address, correct;
+    - d/patches/*:
+      - Forwarded field, specify as 'not-needed';
+      - chomp trailing blanks;
+    - d/upstream/metadata, introduce,
+
+ -- Jerome Benoit <calculus@rezozer.net>  Tue, 10 Nov 2020 21:57:05 +0000
+
+mpfrc++ (3.6.7+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Debianization:
+    - debian/copyright:
+      - copyright year tuples, update;
+      - X-Upstream-Vcs field, migration to github;
+      - Files-Excluded, refresh;
+    - debian/control:
+      - debhelper, bump to 13;
+      - Rules-Requires-Root, introduce and set to no;
+      - Standards-Version, bump to version 4.5.0 (no change);
+    - debian/watch, migration to github.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Sat, 27 Jun 2020 19:32:54 +0000
+
+mpfrc++ (3.6.6+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Debianization:
+    - debian/copright:
+      - Copyright year tuple, update;
+    - debian/control:
+      - Standards Version, bump to 4.3.0 (no change);
+    - debian/source/*:
+      - d/s/options, discard;
+    - debian/tests/*:
+      - d/t/build-examples, harden.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Fri, 25 Jan 2019 13:45:24 +0000
+
+mpfrc++ (3.6.5+ds-3) unstable; urgency=medium
+
+  * Debianization:
+    - debian/copyright:
+      - copyright years, refresh;
+      - Format URI, secure;
+    - debian/control:
+      - debhelper, bump to 11;
+      - Standards Version, bump to 4.1.4 (no change);
+      - Vcs-*, update;
+    - debian/rules:
+      - debhelper, bump to 11;
+      - get-orig-source target, remove;
+      - override_dh_auto_test target, now check DEB_BUILD_OPTIONS against
+        nocheck.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Sat, 05 May 2018 13:08:52 +0000
+
+mpfrc++ (3.6.5+ds-2) unstable; urgency=medium
+
+  * Debianization:
+    - debian/control:
+      - Vcs-Git field, correct.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Thu, 31 Aug 2017 04:51:16 +0000
+
+mpfrc++ (3.6.5+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Debianization:
+    - debian/copyright, update;
+    - debian/control:
+      - debhelper, bump to 10;
+      - Standards Version, bump to 4.1.0 (no change);
+      - Vcs-* fields, secure;
+    - debian/compat, bump to 10;
+    - debian/watch:
+      - version, bump to 4;
+      - URL, update.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Wed, 30 Aug 2017 19:21:39 +0000
+
+mpfrc++ (3.6.3+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Debianization:
+    - debian/copyright, update;
+    - debian/control:
+      - Build-Depends field, add needed packages to perform check;
+      - Vcs-Browser field, correct;
+    - debian/rules:
+      - dh_auto_test, introduce ad hoc check based on example/makefile ;
+      - dh_compress, neutralize examples compression;
+    - debian/clean, add to cleanup ad hoc check material;
+    - debian/patches/minimalize-example-makefile.patch, enhance;
+    - debian/tests/control, initiate (CI).
+
+ -- Jerome Benoit <calculus@rezozer.net>  Fri, 08 Jan 2016 13:58:22 +0000
+
+mpfrc++ (3.6.2+ds-1) unstable; urgency=medium
+
+  * New upstream version:
+    - plain GPL-3+, namely no more FOSS License Exception.
+  * Debianization:
+    - debian/copyright:
+      - repack by using the Files-Excluded machinery instead of the ad-hoc
+        script debian/repack;
+      - refresh;
+    - debian/repack, discard (see above);
+    - debian/watch, revisit (see above);
+    - debian/control, replace the short description by the one given in the
+      Mercurial README.md file;
+    - debian/libmpfrc++-dev.docs, remove as it installed only the FOSS License
+      which was discarded by the upstream maintainer.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Mon, 13 Apr 2015 10:25:58 +0000
+
+mpfrc++ (3.6.1+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Debianization:
+    - debian/copyright, refresh;
+    - debian/control:
+      - Standards Version, bump to 3.9.6;
+      - Vcs-Browser field, correct;
+    - debian/watch, fix.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Fri, 10 Oct 2014 14:26:22 +0000
+
+mpfrc++ (3.5.9+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Wed, 09 Jul 2014 16:03:39 +0000
+
+mpfrc++ (3.5.8+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Thu, 19 Jun 2014 12:40:29 +0000
+
+mpfrc++ (3.5.7+ds-1) unstable; urgency=low
+
+  * New upstream version.
+  * Debianization:
+    - Standards Version, bump to 3.9.5;
+    - debian/control, Vcs-Browser field correction;
+    - debian/copyright, refresh.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Sat, 31 May 2014 10:23:13 +0000
+
+mpfrc++ (3.5.6+ds-1) unstable; urgency=low
+
+  * Initial release (Closes: #723839), thanks to the upstream maintainer
+    Pavel Holoborodko <pavel@holoborodko.com> for clarifying the upstream
+    license policy and for tweaking the upstream Mercurial repository to
+    allow minimal debian/{rules,watch} material and a cleaner package.
+  * Debianization:
+    - debian/copyright in DEP-5 format;
+    - debhelper build-dep to >= 9;
+    - source format 3.0 (quilt);
+    - Standards Version 3.9.4;
+    - debian/patches/ patches in DEP-3 format;
+    - debian/repack script meant for debian/watch file;
+    - debian/watch file, which depends on debian/repack to repack;
+    - debian/rules:
+      - minimal rules;
+      - optional get-orig-source target which relies on uscan to get the
+        currently packaged upstream tarball source and to repack it;
+      - default target which basically queries packages status with
+        uscan, output in DEHS format.
+  * Minor fixes and enhancements:
+    - example/* :
+      - example/example.cpp, system preprocessing directive #include;
+      - minimal example/makefile, unnecessary targets were wiped out.
+
+ -- Jerome Benoit <calculus@rezozer.net>  Sun, 13 Oct 2013 19:30:04 +0000

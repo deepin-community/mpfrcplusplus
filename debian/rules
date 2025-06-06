@@ -1,4 +1,15 @@
 #!/usr/bin/make -f
 
+default:
+	@uscan --no-conf --dehs --report || true
+
 %:
 	dh $@
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	$(MAKE) -C example CXXFLAGS=-I.. CFLAGS= CPPFLAGS= LDFLAGS= && ./example/example
+endif
+
+override_dh_compress:
+	dh_compress -Xexamples
