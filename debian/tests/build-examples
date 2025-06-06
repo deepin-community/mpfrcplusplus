@@ -1,0 +1,13 @@
+#!/bin/sh
+# autopkgtest check: build and launch program examples
+set -ue
+cd $AUTOPKGTEST_TMP
+
+cp -prd /usr/share/doc/libmpfrc++-dev/examples .
+cd examples
+
+make
+
+./example
+
+exit 0

@@ -1,0 +1,17 @@
+Description: system preprocessing directive #include for examples
+Origin: debian
+Forwarded: not-needed
+Author: Jerome Benoit <calculs@rezozer.net>
+Last-Update: 2020-11-10
+
+--- a/example/example.cpp
++++ b/example/example.cpp
+@@ -47,7 +47,7 @@
+ */
+ 
+ #include <iostream>
+-#include "../mpreal.h"
++#include <mpreal.h>
+ 
+ int main(int argc, char* argv[])
+ {
